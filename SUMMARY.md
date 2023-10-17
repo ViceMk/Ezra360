@@ -2,7 +2,7 @@
 
 ## 🏴 Get Started
 
-* [Welcome to Ezra360](README.md)
+* [Welcome To Ezra360](README.md)
 * [Ezra360 Background](get-started/ezra360-background/README.md)
   * [Solutions Overview](get-started/ezra360-background/solutions-overview.md)
 * [User Guide](get-started/user-guide.md)
