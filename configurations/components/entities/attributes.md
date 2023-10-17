@@ -1,6 +1,6 @@
 # Attributes
 
-### Adding New Attribute
+### Adding New Attributes
 
 <mark style="color:blue;">**Add New Attributes**</mark>\
 Navigate to the Entity you want to add Attribute for, and click on a dropdown for that entity. \

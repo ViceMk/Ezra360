@@ -7,9 +7,9 @@ A **Component** is like a basic building block that you can attach to an applica
 The following Components are all configured under **Settings Entity**. The settings entity will redirect you to Admin module where configuration is done.
 
 {% hint style="warning" %}
-Please be Aware
+Please Note:
 
-The accessibility to this module you are able to view while you navigate through Ezra360 depends on your access settings. For more information, see [security-roles-and-privileges.md](../security-and-roles/security-roles-and-privileges.md "mention") and [user-roles.md](../security-and-roles/user-roles.md "mention")
+Your access to this module within the Ezra360 platform depends on your access settings. For more information, see [security-roles-and-privileges.md](../security-and-roles/security-roles-and-privileges.md "mention") and [user-roles.md](../security-and-roles/user-roles.md "mention")
 {% endhint %}
 
 To navigate it, go to **Modules** > **Settings** > **Customization**\
