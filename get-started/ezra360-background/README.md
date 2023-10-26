@@ -27,11 +27,3 @@ Click [here](https://ezra360.com/about/) to learn more about Ezra360. To Access 
 &#x20;Ezra360 has a good relationship with the following Original Equipment Manufacturer (**OEMs**):&#x20;
 
 &#x20;• **SOFT AER Cloud Solutions**, as a platinum partner in implementations of Elastic 360 (Cloud and On-premises) Ezra360 is the proposed base solution for your bespoke business system and digitized solution as it has proven to work in similar organizations of the same size or bigger. We have the experience of implementing other systems and similar solutions for many clients in the past 10 years.&#x20;
-
-
-
-
-
-Presented below are select corporations that have incorporated the Ezra360 Solutions system into various functional domains across their operational spectrum.
-
-<figure><img src="../../.gitbook/assets/Grey minimalist business project presentation  (3).svg" alt=""><figcaption></figcaption></figure>
