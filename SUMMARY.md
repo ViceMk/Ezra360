@@ -54,7 +54,7 @@
 
 ## 🔐 SECURITY AND ROLES
 
-* [Understanding Users, Roles, and Permissions](security-and-roles/understanding-users-roles-and-permissions.md)
+* [Users, Roles, and Permissions](security-and-roles/users-roles-and-permissions.md)
 * [User Roles](security-and-roles/user-roles.md)
 * [Security Roles and Privileges](security-and-roles/security-roles-and-privileges.md)
 

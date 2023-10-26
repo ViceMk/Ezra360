@@ -2,14 +2,14 @@
 
 ## Get Started with Ezra
 
-We've put together some helpful guides for you to get setup with our product quickly and easily. It is accessible through your browser. It is used to set up, administer, configure, and access your organization, branches, clients, services and many more.\
+We've put together some helpful guides for you to get setup with our product quickly and easily. It is accessible through your browser. This guide is used to set up, administer, configure, and access your organization, branches, clients, services and many more.\
 \
 **You can log into **<mark style="color:orange;">**Ezra**</mark><mark style="color:blue;">**360**</mark>** using the** **following different environments URL's** \
 **for example:** [**https://acme.dev.xrm.soft-aer.com**](https://jse.dev.xrm.soft-aer.com/Entity/List/RB\_IDUAnnualView)
 
 * Development: [**https://acme.dev.xrm.soft-aer.com**](https://jse.dev.xrm.soft-aer.com/Entity/List/RB\_IDUAnnualView)
-* User Acceptance Testing (UAT) : [**https://acme.uat.xrm.soft-aer.com**](https://jse.dev.xrm.soft-aer.com/Entity/List/RB\_IDUAnnualView)
-* Production: [**https://acme.dev.xrm.soft-aer.com**](https://jse.dev.xrm.soft-aer.com/Entity/List/RB\_IDUAnnualView)
+* User Acceptance Testing (UAT) : [**https://acme.uat.ezra360.com**](https://jse.dev.xrm.soft-aer.com/Entity/List/RB\_IDUAnnualView)
+* Production: [**https://acme.ezra360.com**](https://jse.dev.xrm.soft-aer.com/Entity/List/RB\_IDUAnnualView)
 
 For more information on setting up your environment, contact us [here](https://ezra360.com/contact/)
 
@@ -25,7 +25,7 @@ This guide provides a detailed overview of how to configure, customize, setup, a
 
 #### Sign in to <mark style="color:orange;">Ezra</mark><mark style="color:blue;">360</mark>
 
-Ezra360 supports internal users to login using Microsoft Active Directory and soft-aer directory. User can use either one of the two log in options.\
+Ezra360 supports internal users to login using Microsoft Active Directory and **soft-aer** directory. User can use either one of the two log in options.\
 \
 Authentication needs to happen, if you are using the Microsoft active directory. The below screen shows the sign in option of the Microsoft Active Directory.
 

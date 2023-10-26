@@ -2,8 +2,11 @@
 
 <figure><img src="../.gitbook/assets/Notice Under Construction Tape  Ezra.png" alt=""><figcaption></figcaption></figure>
 
-{% hint style="info" %}
-**Good to know:** depending on the product you're building, it can be useful to explicitly document use cases. Got a product that can be used by a bunch of people in different ways? Maybe consider splitting it out!
+{% hint style="danger" %}
+Warning!\
+Never send login credentials, API keys, or other confidential information through unencrypted email. Never post this information to any public forum such as Community coding hubs or Stack Overflow. \
+\
+For Details, contact Ezra support.
 {% endhint %}
 
 ## Figma Integrations

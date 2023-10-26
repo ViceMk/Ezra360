@@ -6,6 +6,8 @@ description: Description of how developers will perform tasks on Ezra360
 
 <figure><img src="../../.gitbook/assets/Notice Under Construction Tape  Ezra.png" alt=""><figcaption></figcaption></figure>
 
+
+
 {% hint style="info" %}
 **Good to know:** depending on the product you're building, it can be useful to explicitly document use cases. Got a product that can be used by a bunch of people in different ways? Maybe consider splitting it out!
 {% endhint %}
@@ -28,3 +30,6 @@ Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget me
 {% endtab %}
 {% endtabs %}
 
+
+
+<table><thead><tr><th>Response Code</th><th width="187.33333333333331">Text</th><th>Description</th></tr></thead><tbody><tr><td>200</td><td>Ok</td><td>Server is functioning properly</td></tr><tr><td>500</td><td>Internal Server Error</td><td>Server is not available</td></tr><tr><td></td><td></td><td></td></tr></tbody></table>
