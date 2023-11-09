@@ -14,8 +14,11 @@ description: >-
 
 
 
-***
-
 Presented below are select corporations that have incorporated the Ezra360 Solutions system into various functional domains across their operational spectrum.
 
+***
+
 <figure><img src="../../.gitbook/assets/Grey minimalist business project presentation  (3).svg" alt=""><figcaption></figcaption></figure>
+
+***
+
