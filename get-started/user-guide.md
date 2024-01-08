@@ -5,11 +5,11 @@
 We've put together some helpful guides for you to get setup with our product quickly and easily. It is accessible through your browser. This guide is used to set up, administer, configure, and access your organization, branches, clients, services and many more.\
 \
 **You can log into **<mark style="color:orange;">**Ezra**</mark><mark style="color:blue;">**360**</mark>** using the** **following different environments URL's** \
-**for example:** [**https://acme.dev.xrm.soft-aer.com**](https://jse.dev.xrm.soft-aer.com/Entity/List/RB\_IDUAnnualView)
+**for example:** [**https://company.dev.xrm.soft-aer.com**](https://jse.dev.xrm.soft-aer.com/Entity/List/RB\_IDUAnnualView)
 
-* Development: [**https://acme.dev.xrm.soft-aer.com**](https://jse.dev.xrm.soft-aer.com/Entity/List/RB\_IDUAnnualView)
-* User Acceptance Testing (UAT) : [**https://acme.uat.ezra360.com**](https://jse.dev.xrm.soft-aer.com/Entity/List/RB\_IDUAnnualView)
-* Production: [**https://acme.ezra360.com**](https://jse.dev.xrm.soft-aer.com/Entity/List/RB\_IDUAnnualView)
+* Development: [**https://company.dev.xrm.soft-aer.com**](https://jse.dev.xrm.soft-aer.com/Entity/List/RB\_IDUAnnualView)
+* User Acceptance Testing (UAT) : [**https://company.uat.ezra360.com**](https://jse.dev.xrm.soft-aer.com/Entity/List/RB\_IDUAnnualView)
+* Production: [**https://company.ezra360.com**](https://jse.dev.xrm.soft-aer.com/Entity/List/RB\_IDUAnnualView)
 
 For more information on setting up your environment, contact us [here](https://ezra360.com/contact/)
 

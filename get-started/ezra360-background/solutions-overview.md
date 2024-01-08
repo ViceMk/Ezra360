@@ -12,7 +12,7 @@ description: >-
 
 <figure><img src="../../.gitbook/assets/MIB Solution.png" alt=""><figcaption><p><mark style="color:red;">Ezra MIB System: Click Image to view full screen</mark></p></figcaption></figure>
 
-
+<figure><img src="../../.gitbook/assets/Colorful Calm Corporate Clean Mind Map(2).png" alt=""><figcaption></figcaption></figure>
 
 Presented below are select corporations that have incorporated the Ezra360 Solutions system into various functional domains across their operational spectrum.
 

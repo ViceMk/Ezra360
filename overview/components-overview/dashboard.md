@@ -32,7 +32,7 @@ You can also have an **embedded Dashboard** that is integrated with **PowerBI** 
 | **Taskboard** | It is a representation of tasks or work items presented in a structured format that allows for easy tracking, management, and collaboration |
 | **Data Grid** | is a component that presents tabular data in a structured format within the context of a dashboard                                          |
 | **Graphs**    | <p><br>Line<br>Bar Column<br>Column<br>Pie<br>Area<br>Scatter<br>Histogram<br>Candlestick<br>Organizational Tree<br>Treemap<br>Guage</p>    |
-| **IFrame**    | IFrame is used to display content from another web page or application within a designated area of the current page.                        |
+| **IFrame**    | iFrame is used to display content from another web page or application within a designated area of the current page.                        |
 
 
 
