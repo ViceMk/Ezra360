@@ -10,9 +10,9 @@ description: >-
 
 <figure><img src="../../.gitbook/assets/Ezra ERP.svg" alt=""><figcaption><p><mark style="color:red;">Ezra ERP System: Click Image to view full screen</mark></p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/MIB Solution.png" alt=""><figcaption><p><mark style="color:red;">Ezra MIB System: Click Image to view full screen</mark></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/MIB Solution Post 2 (2).svg" alt=""><figcaption><p><mark style="color:red;">Ezra MIB System: Click Image to view full screen</mark></p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/Colorful Calm Corporate Clean Mind Map(2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Traffic Solution post (3).svg" alt=""><figcaption></figcaption></figure>
 
 Presented below are select corporations that have incorporated the Ezra360 Solutions system into various functional domains across their operational spectrum.
 
