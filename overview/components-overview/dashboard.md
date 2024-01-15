@@ -1,3 +1,8 @@
+---
+cover: ../../.gitbook/assets/HomeLaptop_Mockup02.svg
+coverY: 192
+---
+
 # Dashboard
 
 When you first log in to the <mark style="color:orange;">**Ezra**</mark><mark style="color:blue;">**360**</mark>, you will land on a customizable dashboard composed of different widgets. \

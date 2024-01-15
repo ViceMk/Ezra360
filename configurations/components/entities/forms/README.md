@@ -5,7 +5,7 @@ To add a new form click the following <mark style="color:blue;">**Add New**</mar
 
 <figure><img src="../../../../.gitbook/assets/Untitled design 42.png" alt=""><figcaption><p><mark style="color:red;">Click Image to continue</mark></p></figcaption></figure>
 
-The image below form creation fields.&#x20;
+Below, is the from
 
 <figure><img src="../../../../.gitbook/assets/Untitled design 43.png" alt=""><figcaption><p><mark style="color:red;">Click image to view full screen</mark></p></figcaption></figure>
 
