@@ -14,7 +14,7 @@ description: >-
 
 <figure><img src="../../.gitbook/assets/Traffic Solution post (3).svg" alt=""><figcaption></figcaption></figure>
 
-Presented below are select corporations that have incorporated the Ezra360 Solutions system into various functional domains across their operational spectrum.
+Presented below are select corporations that have incorporated the <mark style="color:orange;">**Ezra**</mark><mark style="color:blue;">**360**</mark>** Solutions** system into various functional domains across their operational spectrum.
 
 ***
 
