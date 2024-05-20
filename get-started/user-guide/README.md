@@ -29,12 +29,12 @@ Ezra360 supports internal users to login using Microsoft Active Directory and **
 \
 Authentication needs to happen, if you are using the Microsoft active directory. The below screen shows the sign in option of the Microsoft Active Directory.
 
-<figure><img src="../.gitbook/assets/Untitled design 17.png" alt=""><figcaption><p><mark style="color:red;">Click image to view full screen</mark></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Untitled design 17.png" alt=""><figcaption><p><mark style="color:red;">Click image to view full screen</mark></p></figcaption></figure>
 
 \
 \
 The page below shows the Ezra-main page sign in directory.\
 &#x20;If you have an account sign in here, [https://login.soft-aer.com](https://login.soft-aer.com)&#x20;
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p><mark style="color:red;">Click image to view full screen</mark></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p><mark style="color:red;">Click image to view full screen</mark></p></figcaption></figure>
 

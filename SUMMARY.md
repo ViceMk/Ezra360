@@ -5,7 +5,8 @@
 * [Welcome To Ezra360](README.md)
 * [Ezra360 Background](get-started/ezra360-background/README.md)
   * [Solutions Overview](get-started/ezra360-background/solutions-overview.md)
-* [User Guide](get-started/user-guide.md)
+* [User Guide](get-started/user-guide/README.md)
+  * [Create New Users](get-started/user-guide/create-new-users.md)
 
 ## Overview
 
@@ -21,7 +22,7 @@
   * [Reporting](overview/components-overview/reporting.md)
   * [Action Buttons](overview/components-overview/action-buttons.md)
 
-## 🛠 CONFIGURATIONS
+## 🛠️ CONFIGURATIONS
 
 * [Components Config Overview](configurations/components-config-overview.md)
 * [Components](configurations/components/README.md)
