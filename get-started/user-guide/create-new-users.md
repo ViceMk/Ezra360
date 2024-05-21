@@ -14,10 +14,14 @@ For details on purchasing and licensing , refer to the Ezra360 Licensing Guide h
 
 ### Grant Access to a User
 
-System Administrator are eligible to assign access to users in the <mark style="color:blue;">**Security**</mark> Module\
-External users need to be added in your tenant directory to be assigned roles. These users should be added as new users and then given the appropriate roles. For a specific applications, it is necessary that the guest user's company also uses the organization's mail.
+System Administrators are eligible to assign access to users in the <mark style="color:blue;">**Security**</mark> Module\
+External users need to be added in your tenant directory to be assigned roles. These users should be added as new users and then given the appropriate roles. For a specific applications, it is necessary that the guest user's company also uses the organization's mail. A user can belong to a specific Business Unit, Team, and have a specific role. Look at&#x20;
 
 
+
+{% hint style="info" %}
+You can assign multiple security roles to each team. When a team is given a role, all its members receive the privileges linked to that role as long as they are part of the team.
+{% endhint %}
 
 ### Manually add a new user
 
@@ -49,3 +53,16 @@ All fields marked with red asterisks (<mark style="color:red;">**\***</mark>) ar
 When your form is filled, click the save button on <mark style="color:orange;">**2,**</mark> to save and create a new user.
 
 <figure><img src="../../.gitbook/assets/51.png" alt=""><figcaption><p><mark style="color:red;">Click image to view full screen</mark></p></figcaption></figure>
+
+### Adding a New Team
+
+A team consists of users who work together and share business records. Each user can be a part of several teams. Look at the following on how to add a new team.
+
+1. Navigate to the **Security** Module.
+2. Click the **Users** Entity/Sub-Module.
+3. Click the **New** Button here
+
+<figure><img src="../../.gitbook/assets/52.png" alt=""><figcaption><p><mark style="color:red;">Click image to view full screen</mark></p></figcaption></figure>
+
+The following form will be display for creating a new team.
+
