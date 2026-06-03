@@ -1,5 +1,6 @@
 ---
 layout:
+  width: default
   title:
     visible: true
   description:
@@ -9,6 +10,12 @@ layout:
   outline:
     visible: false
   pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
     visible: true
 ---
 
@@ -25,15 +32,4 @@ Ezra360 is an innovative low-code platform designed to empower businesses with t
 
 We initiate the process with Ezra360 [Tenant](../../use-cases/tenants/). A tenant, in this context, refers to the account established within the Ezra360 environment when you subscribe to our services. Each tenant is distinguished by its unique domains, user profiles, security groups, and subscriptions. Your Ezra360 tenant comes with a domain name in the format of .ezra360.com, such as "_<mark style="color:blue;">**Businessname.ezra360.com**</mark>_"
 
-Click [here](https://ezra360.com/about/) to learn more about Ezra360. To Access Ezra360 website use the following URL:\
-[https://ezra360.com/](https://ezra360.com/)
-
 ***
-
-#### &#x20;                        OEM IMPLEMENTATION PARTNERSHIPS: SOFT AER CLOUD SOLUTIONS
-
-***
-
-&#x20;Ezra360 has a good relationship with the following Original Equipment Manufacturer (**OEMs**):&#x20;
-
-&#x20;• **SOFT AER Cloud Solutions**, as a platinum partner in implementations of Elastic 360 (Cloud and On-premises) Ezra360 is the proposed base solution for your bespoke business system and digitized solution as it has proven to work in similar organizations of the same size or bigger. We have the experience of implementing other systems and similar solutions for many clients in the past 10 years.&#x20;
