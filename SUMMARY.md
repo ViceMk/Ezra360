@@ -1,6 +1,6 @@
 # Table of contents
 
-## 🏴 Get Started
+## Get Started
 
 * [Welcome To Ezra360](README.md)
 * [Ezra360 Background](get-started/ezra360-background/README.md)
@@ -22,7 +22,7 @@
   * [Reporting](overview/components-overview/reporting.md)
   * [Action Buttons](overview/components-overview/action-buttons.md)
 
-## 🛠️ CONFIGURATIONS
+## CONFIGURATIONS
 
 * [Components Config Overview](configurations/components-config-overview.md)
 * [Components](configurations/components/README.md)
@@ -53,7 +53,7 @@
   * [SSIS](configurations/integrations/ssis.md)
   * [Payment Gate](configurations/integrations/payment-gate.md)
 
-## 🔐 SECURITY AND ROLES
+## SECURITY AND ROLES
 
 * [Users, Roles, and Permissions](security-and-roles/users-roles-and-permissions.md)
 * [User Roles](security-and-roles/user-roles.md)
