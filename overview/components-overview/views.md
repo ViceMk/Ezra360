@@ -33,8 +33,7 @@ On <mark style="color:orange;">**#1**</mark> shows where you can filter the view
 * **Filters:** Filter data to display only what you’re interested in.
 * **Column headings and sorting:** In a grid, column headings display the names of columns that were defined in the layout. For example, in the above images when you click subject, you will sort the listing data alphabetically (Ascending or descending)
 * The **Select All** check box appears next to the first column heading. When you select the check box, all the rows on the current page in the grid are selected, you can perform actions collectively for all records.
-* **Index:** You can select a character in the index to filter records in the grid or list that start with that character. For example, to display records that start with the letter _P_, select _P_ on the index, and records that start with _P_ are displayed\
-
+* **Index:** You can select a character in the index to filter records in the grid or list that start with that character. For example, to display records that start with the letter _P_, select _P_ on the index, and records that start with _P_ are displayed<br>
 
 The image below shows a view with Select options. The pointer at <mark style="color:orange;">**#4**</mark> shows the listing of views.
 

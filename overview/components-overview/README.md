@@ -1,6 +1,6 @@
 # Components Overview
 
-**Components of **<mark style="color:orange;">**Ezra**</mark><mark style="color:blue;">**360**</mark>\
+**Components of&#x20;**<mark style="color:orange;">**Ezra**</mark><mark style="color:blue;">**360**</mark>\
 Ezra360 platform is prebuilt with features and components that can be configured to implement any business process solution.&#x20;
 
 <figure><img src="../../.gitbook/assets/Blue White Corporate Professional Business Geometric Microsoft Teams Background.png" alt=""><figcaption><p><mark style="color:red;">Click image to view full screen: Ezra360 Building Blocks</mark></p></figcaption></figure>

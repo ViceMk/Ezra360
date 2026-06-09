@@ -14,11 +14,7 @@ description: >-
 
 <figure><img src="../../.gitbook/assets/Traffic Solution post (3).svg" alt=""><figcaption></figcaption></figure>
 
-Presented below are select corporations that have incorporated the <mark style="color:orange;">**Ezra**</mark><mark style="color:blue;">**360**</mark>** Solutions** system into various functional domains across their operational spectrum.
-
-***
-
-<figure><img src="../../.gitbook/assets/Grey minimalist business project presentation  (3).svg" alt=""><figcaption></figcaption></figure>
+Presented below are select corporations that have incorporated the <mark style="color:orange;">**Ezra**</mark><mark style="color:blue;">**360**</mark>**&#x20;Solutions** system into various functional domains across their operational spectrum.
 
 ***
 

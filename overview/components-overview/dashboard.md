@@ -5,8 +5,7 @@ coverY: 192
 
 # Dashboard
 
-When you first log in to the <mark style="color:orange;">**Ezra**</mark><mark style="color:blue;">**360**</mark>, you will land on a customizable dashboard composed of different widgets. \
-
+When you first log in to the <mark style="color:orange;">**Ezra**</mark><mark style="color:blue;">**360**</mark>, you will land on a customizable dashboard composed of different widgets. <br>
 
 <mark style="color:orange;">**#1**</mark> Shows the current logged in user.
 
@@ -19,7 +18,7 @@ When you first log in to the <mark style="color:orange;">**Ezra**</mark><mark st
 <figure><img src="../../.gitbook/assets/Untitled design 33.png" alt=""><figcaption></figcaption></figure>
 
 \
-_**Dashboards** pages serves as a central hub that provides an overview of your activities, tasks, and important updates related to your role or responsibilities._ Ezra360 dashboards are customizable, The system has  several dashboard layouts that can be tailored for your role. You can have different types of charts that best display your data right from within the dashboard layout.
+&#xNAN;_**Dashboards** pages serves as a central hub that provides an overview of your activities, tasks, and important updates related to your role or responsibilities._ Ezra360 dashboards are customizable, The system has  several dashboard layouts that can be tailored for your role. You can have different types of charts that best display your data right from within the dashboard layout.
 
 On the image below, shows Ezra dashboard with data components and different graphs for report.  \
 To select a different dashboard, select the dropdown arrow on <mark style="color:orange;">**#1**</mark>  on the image below.\

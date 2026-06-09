@@ -30,6 +30,6 @@ Ezra360 is an innovative low-code platform designed to empower businesses with t
 
 <figure><img src="../../.gitbook/assets/Colorful Hexagon Chart Diagram Instagram Post 1 (1).png" alt=""><figcaption><p><mark style="color:red;">Solution Overview</mark></p></figcaption></figure>
 
-We initiate the process with Ezra360 [Tenant](../../use-cases/tenants/). A tenant, in this context, refers to the account established within the Ezra360 environment when you subscribe to our services. Each tenant is distinguished by its unique domains, user profiles, security groups, and subscriptions. Your Ezra360 tenant comes with a domain name in the format of .ezra360.com, such as "_<mark style="color:blue;">**Businessname.ezra360.com**</mark>_"
+We initiate the process with Ezra360 [Tenant](../../solutions/crm/). A tenant, in this context, refers to the account established within the Ezra360 environment when you subscribe to our services. Each tenant is distinguished by its unique domains, user profiles, security groups, and subscriptions. Your Ezra360 tenant comes with a domain name in the format of .ezra360.com, such as "_<mark style="color:blue;">**Businessname.ezra360.com**</mark>_"
 
 ***

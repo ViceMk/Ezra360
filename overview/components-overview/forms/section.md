@@ -3,8 +3,7 @@
 **Sections** provide a clear structure of the forms in Ezra360, and these sections contains a set of forms and fields. <mark style="color:orange;">**#1**</mark> Shows a section called "Banking Details". \
 <mark style="color:orange;">**#2**</mark> shows sections collapse or expand the display of information within a form, by clicking on the top right arrow on that section, this feature allows users to focus on the sections they need while hiding the rest of which is useful when dealing with forms that contain large number of fields.\
 \
-You will often find multiple sections within the form. Each section contains a set of fields that are logically related or pertain to a specific aspect of the entity being displayed. These sections are visually separated from each other to provide clarity and structure to the form.\
-
+You will often find multiple sections within the form. Each section contains a set of fields that are logically related or pertain to a specific aspect of the entity being displayed. These sections are visually separated from each other to provide clarity and structure to the form.<br>
 
 <figure><img src="../../../.gitbook/assets/Untitled design 10.png" alt=""><figcaption><p><mark style="color:red;">Click image to view full screen</mark></p></figcaption></figure>
 

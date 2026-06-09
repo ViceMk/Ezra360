@@ -1,0 +1,6 @@
+---
+icon: coffin-cross
+---
+
+# MIB
+

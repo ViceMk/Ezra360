@@ -16,7 +16,7 @@ The form <mark style="color:orange;">**#1**</mark> shows input fields for adding
 
 To add a new select dropdown, click on the entity you would like a add **select option** to, and the Add button on <mark style="color:orange;">**#3**</mark> will appear.\
 The grid below shows  available **Select Options** for an Entity. Each select option has its own _Display name_, _Unique name_ which is auto-generated when creating a new one, and a _parent select_ option. \
-_You can check **Select Options** on the grid and then delete them._\
+&#xNAN;_&#x59;ou can check **Select Options** on the grid and then delete them._\
 _You can double click on an entity to view and edit the fields._\
 The Early Bound button at <mark style="color:orange;">**#4**</mark> downloads the [_C# Source File (.cs)_](#user-content-fn-1)[^1]_._ The file contains set of entities and its classes.&#x20;
 

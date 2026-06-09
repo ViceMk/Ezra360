@@ -10,8 +10,7 @@ Forms are user interfaces that allows user to view, enter and edit data related 
 
 **Main Form:**\
 The main form is the comprehensive primary form for a specific entity, and it contains essential fields and information related to that entity. It is mainly used when users access the entity directly through direct links. They provide complete view of the entity, allowing users to perform **CRUD** operations (_Create, Read, Update, Delete_) depending on their security roles. Which has multiple buttons to choose from that makes action to the entity.\
-On <mark style="color:orange;">**#1**</mark> of the image below shows an example of a main form.\
-
+On <mark style="color:orange;">**#1**</mark> of the image below shows an example of a main form.<br>
 
 <figure><img src="../../../.gitbook/assets/Untitled design 36 (2).png" alt=""><figcaption><p><mark style="color:red;">Click image to view full screen</mark></p></figcaption></figure>
 

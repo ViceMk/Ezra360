@@ -6,7 +6,6 @@
 * [Ezra360 Background](get-started/ezra360-background/README.md)
   * [Solutions Overview](get-started/ezra360-background/solutions-overview.md)
 * [User Guide](get-started/user-guide.md)
-  * [Create New Users](get-started/user-guide/create-new-users.md)
 
 ## Overview
 
@@ -39,47 +38,68 @@
   * [Select Options](configurations/components/select-options.md)
   * [Navigation (Modules)](configurations/components/navigation-modules.md)
   * [Dashboards](configurations/components/dashboards.md)
-  * [Reports](configurations/components/reports.md)
-  * [Resources](configurations/components/resources.md)
-  * [Assemblies](configurations/components/assemblies.md)
-  * [API's](configurations/components/apis.md)
   * [Templates](configurations/components/templates.md)
   * [Workflows](configurations/components/workflows.md)
-* [Integrations](configurations/integrations/README.md)
-  * [Power BI](configurations/integrations/power-bi.md)
-  * [SharePoint](configurations/integrations/sharepoint.md)
-  * [Power Automate](configurations/integrations/power-automate.md)
-  * [SSRS](configurations/integrations/ssrs.md)
-  * [SSIS](configurations/integrations/ssis.md)
-  * [Payment Gate](configurations/integrations/payment-gate.md)
+  * [Duplicate Detection](configurations/components/duplicate-detection.md)
+
+## Customization
+
+* [Web Resources](customization/web-resources/README.md)
+  * [Javascripts](customization/web-resources/javascripts.md)
+  * [HTML](customization/web-resources/html.md)
+  * [CSS](customization/web-resources/css.md)
+  * [Icons](customization/web-resources/icons.md)
+* [Execute Request](customization/execute-request.md)
+* [Plugins](customization/plugins.md)
+* [Reports](customization/reports.md)
+* [API's](customization/apis/README.md)
+  * [API's](customization/apis/apis.md)
+* [Ezra QL](customization/ezra-ql.md)
+* [Data Import](customization/data-import.md)
+* [SDK's](customization/sdks.md)
 
 ## SECURITY AND ROLES
 
-* [Users, Roles, and Permissions](security-and-roles/users-roles-and-permissions.md)
 * [User Roles](security-and-roles/user-roles.md)
+* [Create New Users](security-and-roles/create-new-users.md)
+* [Business Units](security-and-roles/business-units.md)
+* [Department](security-and-roles/department.md)
+* [Users, Roles, and Permissions](security-and-roles/users-roles-and-permissions.md)
 * [Security Roles and Privileges](security-and-roles/security-roles-and-privileges.md)
 
-## 💻 Use Cases
+## Solutions
 
-* [Developers](use-cases/developers/README.md)
-  * [Environment Setup](use-cases/developers/environment-setup.md)
-  * [Testing and Debugging](use-cases/developers/testing-and-debugging.md)
-  * [Deployment](use-cases/developers/deployment.md)
-  * [JS](use-cases/developers/js.md)
-  * [API's](use-cases/developers/apis.md)
-  * [Modules](use-cases/developers/modules.md)
-  * [Integration](use-cases/developers/integration.md)
-  * [Plugins](use-cases/developers/plugins.md)
-  * [Auditing](use-cases/developers/auditing.md)
-* [Tenants](use-cases/tenants/README.md)
-  * [Managing your organization](use-cases/tenants/managing-your-organization.md)
-  * [Creating a User](use-cases/tenants/creating-a-user.md)
-  * [Managing Data and Content](use-cases/tenants/managing-data-and-content.md)
-  * [Deactivating, and Deleting User Accounts](use-cases/tenants/deactivating-and-deleting-user-accounts.md)
-  * [Notifications](use-cases/tenants/notifications.md)
+* [CRM](solutions/crm/README.md)
+  * [Sales](solutions/crm/sales.md)
+  * [Marketing](solutions/crm/marketing.md)
+  * [Service](solutions/crm/service.md)
+* [ERP](solutions/erp/README.md)
+  * [Finance](solutions/erp/finance/README.md)
+    * [General Ledger](solutions/erp/finance/general-ledger.md)
+    * [Budgeting](solutions/erp/finance/budgeting.md)
+    * [Accounts Receivables](solutions/erp/finance/accounts-receivables.md)
+    * [Accounts Payables](solutions/erp/finance/accounts-payables.md)
+    * [Cash and Bank Management](solutions/erp/finance/cash-and-bank-management.md)
+  * [Human Resources (HR)](solutions/erp/human-resources-hr.md)
+  * [Payroll](solutions/erp/payroll.md)
+  * [Assets Management](solutions/erp/assets-management.md)
+  * [Inventory Management](solutions/erp/inventory-management.md)
+  * [Supply Chain Management](solutions/erp/supply-chain-management.md)
+* [mSCOA](solutions/mscoa/README.md)
+  * [Solution Overview](solutions/mscoa/solution-overview.md)
+* [TVET ERP](solutions/tvet-erp.md)
+* [Commerce](solutions/commerce.md)
+* [MIB](solutions/mib.md)
+
+## Integrations
+
+* [Power BI](integrations/power-bi.md)
+* [Power Automate](integrations/power-automate.md)
+* [Payments](integrations/payments.md)
+* [SharePoint](integrations/sharepoint.md)
 
 ## 📞 EZRA SUPPORT
 
-* [Getting Support](ezra-support/getting-support.md)
+* [Support](ezra-support/support.md)
 * [FAQ's](ezra-support/faqs.md)
 * [Contact Us](ezra-support/contact-us.md)

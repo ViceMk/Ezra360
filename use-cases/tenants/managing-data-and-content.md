@@ -1,2 +1,0 @@
-# Managing Data and Content
-
