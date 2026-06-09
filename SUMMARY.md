@@ -6,7 +6,6 @@
 * [Ezra360 Background](get-started/ezra360-background/README.md)
   * [Solutions Overview](get-started/ezra360-background/solutions-overview.md)
 * [User Guide](get-started/user-guide.md)
-* [Page 1](get-started/page-1.md)
 
 ## Overview
 
