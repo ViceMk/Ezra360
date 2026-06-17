@@ -12,14 +12,14 @@ Please Note:
 Your access to this module within the Ezra360 platform depends on your access settings. For more information, see [security-roles-and-privileges.md](../security-and-roles/security-roles-and-privileges.md "mention") and [user-roles.md](../security-and-roles/user-roles.md "mention")
 {% endhint %}
 
-To navigate it, go to **Modules** > **Settings** > **Customization**\
-<mark style="color:orange;">**#1**</mark> navigate to list of **Modules**, and click <mark style="color:orange;">**#2**</mark> **settings** Entity, and Click <mark style="color:orange;">**#3**</mark> **Customization**.
+To navigate it, go to **Modules** > **Customization**\
+<mark style="color:orange;">**#1**</mark> navigate to list of **Modules**, and click <mark style="color:orange;">**#2**</mark> **Customization** Entity, or you can instead Click on <mark style="color:orange;">**#1**</mark>**&#x20;Main Menu** then you will see <mark style="color:orange;">**#2**</mark> **Customization** Card which will display all the Customization sub-modules .
 
-<figure><img src="../.gitbook/assets/Untitled design 18.png" alt=""><figcaption><p><mark style="color:red;">Click image to view full screen</mark></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/1 (2) (1).png" alt=""><figcaption><p><mark style="color:red;">Click image to view full screen</mark></p></figcaption></figure>
 
 The **Customization** direct link will take you to an Admin Module, that has a layout like this:
 
-<figure><img src="../.gitbook/assets/Screenshot 2023-08-11 154242.png" alt=""><figcaption><p><mark style="color:red;">Click image to view full screen</mark></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2026-06-10 105749.png" alt=""><figcaption><p><mark style="color:red;">Click image to view full screen</mark></p></figcaption></figure>
 
 From the Admin Module Screen we will navigate to see the listed Entities. <mark style="color:blue;">See the</mark> [entities](components/entities/ "mention")<mark style="color:blue;">configuration.</mark>
 

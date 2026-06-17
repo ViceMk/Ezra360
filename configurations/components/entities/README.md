@@ -1,17 +1,17 @@
 # Entities
 
 <mark style="color:blue;">**Add New Entity**</mark>\
-Configuring **Entities** on Admin Module, you can click on <mark style="color:orange;">**#1**</mark> dropdown select to view list of modules, or you can click on the  <mark style="color:orange;">**#2**</mark> directly on the entity to open the entities with its properties in a table.\
-Each Entity has a **display name** shown in <mark style="color:orange;">**#3**</mark> and has its own unique **schema name**, represented on <mark style="color:orange;">**#4**</mark> inside the angle brackets "**<>**".
+Configuring **Entities** on Admin Module, you can click on <mark style="color:orange;">**#1**</mark> dropdown select to view list of modules and select **Customization**, then click on  <mark style="color:orange;">**#2**</mark> Which will give you the whole system's **Main Menu** then select <mark style="color:orange;">**#3**</mark> entities under Customizations or select <mark style="color:orange;">**#3**</mark> on customization sub-module list.
 
 {% hint style="info" %}
 A **schema name** refers to a unique identifier that is assigned to an entity within Ezra. It is used as a reference consistently across different parts of the platform, including customization, configuration, plugins and integration. The schema name is specified upon creation. It must be unique. This name should be in Pascal case. The schema name is used to create the class for the entity.
 {% endhint %}
 
-To add a new entity on the platform, you will click the <mark style="color:orange;">**#5**</mark> button. The display will appear as follow on the below representation.\
-To view entity properties, click the dropdown to collapse the entity for more information.
+<figure><img src="../../../.gitbook/assets/1 (4).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/Untitled design 19.png" alt=""><figcaption><p><mark style="color:red;">Click image to view full screen</mark></p></figcaption></figure>
+Each Entity has its own **display name** , **schema name**, **Plural Name**, **Entity Type**, **Created By**, **Modified On** and **Modified By** displayed in a list form. To add a new entity on the platform, you will click the <mark style="color:orange;">**#4**</mark> button.&#x20;
+
+<figure><img src="../../../.gitbook/assets/1 (1) (2).png" alt=""><figcaption><p><mark style="color:red;">Click image to view full screen</mark></p></figcaption></figure>
 
 <mark style="color:blue;">**Filling the Entity form:**</mark>\
 When the add button is clicked it will display the form below on <mark style="color:orange;">**#2**</mark> to add a new entity.\
@@ -27,21 +27,46 @@ To **save** the new Entity click <mark style="color:orange;">**#3**</mark> once 
 Duplication detection functionality is pending.
 {% endhint %}
 
-Alternatively if you want to remove entity you can click the **Delete** button on <mark style="color:orange;">**#4,**</mark> this include to existing entities as well. &#x20;
+Alternatively if you want to remove entity you can click the X button in red on <mark style="color:orange;">**#4,**</mark> this include to existing entities as well. &#x20;
 
-<figure><img src="../../../.gitbook/assets/Untitled design 20.png" alt=""><figcaption><p><mark style="color:red;">Click image to view full screen</mark></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/1 (2) (2).png" alt=""><figcaption><p><mark style="color:red;">Click image to view full screen</mark></p></figcaption></figure>
 
-### Form Fields
+### Entity Information
 
 <mark style="color:orange;">**#2**</mark> **Filling Form Fields**
 
-<table><thead><tr><th width="277">Field Record</th><th>Description</th></tr></thead><tbody><tr><td>Display name</td><td>it represents the display name of your field. The name that is displayed to the user on the interface. For example, "<mark style="color:blue;">Sales Order</mark>".</td></tr><tr><td>Schema Name</td><td>It must be unique. It is used to create the logical name. This name should be in Pascal case. The schema name is used to create the class for the entity. For example, "<mark style="color:blue;">SalesOrder</mark>". </td></tr><tr><td>Plural name</td><td>refers to the name used to represent multiple instances of a data record entity. For example, "<mark style="color:blue;">Sales Orders</mark>"</td></tr><tr><td>Entity Type</td><td><strong>Data Record:</strong> refers to the structured data components that represent various business objects or concepts within the system. Each entity is associated with a set of fields that capture relevant information.<br><strong>Document Library:</strong> refers to a centralized repository where you can store and manage various types of documents, files, and attachments associated with records within the Ezra environment.<br></td></tr><tr><td>Owner Type</td><td>Defines the scope and nature of ownership for records within a specific entity.<br><strong>User</strong>: refers to individual users within the system that can be assigned as the owners of records that will have control over those records and can perform actions.<br><strong>Everyone</strong>: It signifies that records are owned by the system itself or are considered to be shared across the organization.</td></tr><tr><td>Business Process</td><td>Business process refers to a series of activities or steps that are performed to achieve a specific business goal. It is a set of coordinated and structured tasks designed to streamline and optimize a particular business function. Business processes are often associated with entities like leads, opportunities, cases, and more, depending on the specific module.</td></tr><tr><td>Social Timeline</td><td></td></tr><tr><td>Enable Audit</td><td>allows you to track changes made to records and system settings. Audit functionality helps organizations maintain a record of activities, which can be crucial for compliance, security, and monitoring purposes.</td></tr><tr><td>Duplicate Detection</td><td>is a feature that helps maintain data accuracy and integrity by identifying and preventing the creation of duplicate records. When enabled, it checks for potential duplicates based on configured rules and criteria when users attempt to create or import new records. If a potential duplicate is detected, users are alerted, and they can decide whether to proceed with the creation of the record.</td></tr><tr><td>Attachments</td><td>This allows you to associate relevant documents and resource files with specific records for easy access and reference.</td></tr><tr><td>Customizable</td><td>it's set to default, which is false. Generally refers to the ability to modify and adapt the entity/record to meet specific functional user requirements.</td></tr><tr><td>Searchable</td><td>It refers that the field value is searchable by the user in a case of categorized search or relevance search.</td></tr><tr><td>Publish Create Event</td><td>Boolean</td></tr></tbody></table>
+<table><thead><tr><th width="277">Field Record</th><th>Description</th></tr></thead><tbody><tr><td>Display name</td><td>it represents the display name of your field. The name that is displayed to the user on the interface. For example, "<mark style="color:blue;">Sales Order</mark>".</td></tr><tr><td>Schema Name</td><td>It must be unique. It is used to create the logical name. This name should be in Pascal case. The schema name is used to create the class for the entity. For example, "<mark style="color:blue;">Sales Order</mark>". </td></tr><tr><td>Name</td><td>it represents the name of your entity. The name that is displayed to the user on the interface. For example, "<mark style="color:blue;">Sales Order</mark>".</td></tr><tr><td>Plural name</td><td>refers to the name used to represent multiple instances of a data record entity. For example, "<mark style="color:blue;">Sales Orders</mark>"</td></tr><tr><td>Entity Type</td><td><strong>Data Record:</strong> refers to the structured data components that represent various business objects or concepts within the system. Each entity is associated with a set of fields that capture relevant information.<br><strong>Document Library:</strong> refers to a centralized repository where you can store and manage various types of documents, files, and attachments associated with records within the Ezra environment.<br></td></tr><tr><td>Object Type</td><td>Refers the record type, in this case will be an Entity.</td></tr><tr><td>Record Ownership</td><td>Defines the scope and nature of ownership for records within a specific entity.<br><strong>User</strong>: refers to individual users within the system that can be assigned as the owners of records that will have control over those records and can perform actions.<br><strong>Everyone</strong>: It signifies that records are owned by the system itself or are considered to be shared across the organization.</td></tr><tr><td>Is Core</td><td>This means that this is a system-related entity and should not be altered, as changes may impact core system functionality.</td></tr><tr><td>Social Timeline</td><td></td></tr><tr><td>Attachments</td><td>This allows you to associate relevant documents and resource files with specific records for easy access and reference.</td></tr><tr><td>Customizable</td><td>it's set to default, which is false. Generally refers to the ability to modify and adapt the entity/record to meet specific functional user requirements.</td></tr></tbody></table>
 
 
 
 ***
 
+### Entity Settings
 
+| Field Record               | Description                                                                                                                                                                                                                                                                                                                                                                                                |
+| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Enable Audit               | allows you to track changes made to records and system settings. Audit functionality helps organizations maintain a record of activities, which can be crucial for compliance, security, and monitoring purposes.                                                                                                                                                                                          |
+| Searchable                 | It refers that the field value is searchable by the user in a case of categorized search or relevance search.                                                                                                                                                                                                                                                                                              |
+| Enable Duplicate Detection | is a feature that helps maintain data accuracy and integrity by identifying and preventing the creation of duplicate records. When enabled, it checks for potential duplicates based on configured rules and criteria when users attempt to create or import new records. If a potential duplicate is detected, users are alerted, and they can decide whether to proceed with the creation of the record. |
+| Allow Import/Export        |                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Allow Business Process     | Business process refers to a series of activities or steps that are performed to achieve a specific business goal. It is a set of coordinated and structured tasks designed to streamline and optimize a particular business function. Business processes are often associated with entities like leads, opportunities, cases, and more, depending on the specific module.                                 |
+| Is Contactable             |                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Required (\*)              | The asterisk means that a value must be entered in this field.                                                                                                                                                                                                                                                                                                                                             |
+
+
+
+### Entity Events
+
+| Record Field         | Description |
+| -------------------- | ----------- |
+| Publish Create Event | Boolean     |
+| Publish Update Event | Boolean     |
+
+### Document Library Settings
+
+| Record Field    | Description |
+| --------------- | ----------- |
+| Display Filelds | Boolean     |
 
 ### Data Types
 
@@ -53,9 +78,11 @@ The fields define the individual data items that can be used to store data in an
 
 ### Adding New View
 
-**Views** are added under Entity, Navigate to **Entity**>**Listing**> **Views** or collapse it to view existing **Views,** Click **Add New** button to open the form for adding new view.  The table below shows descriptive details about the form fields.
+**Views** are added under Entity, Navigate to **Entities**>**Listing&#x20;**<mark style="color:orange;">**#1**</mark> >**System Views,** Click **Add New&#x20;**<mark style="color:orange;">**#2**</mark> to open the form for adding new view.  The table below shows descriptive details <mark style="color:orange;">**#3**</mark>  about the form fields.
 
-<figure><img src="../../../.gitbook/assets/Untitled design 28 (1).png" alt=""><figcaption><p><mark style="color:red;">click Image to view full screen</mark></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/1 (7).png" alt=""><figcaption><p><mark style="color:red;">click Image to view full screen</mark></p></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/1 (1) (3).png" alt=""><figcaption></figcaption></figure>
 
 | Field Record          | Description |
 | --------------------- | ----------- |
@@ -72,9 +99,11 @@ The fields define the individual data items that can be used to store data in an
 
 ### Adding New Form
 
-When adding a new form you navigate to the forms <mark style="color:orange;">**#1**</mark>, when you click the dropdown of the forms you see available form types, you can click the <mark style="color:blue;">Add New</mark> button to add a new form. The <mark style="color:orange;">**#2**</mark> form field will be displayed.
+When adding a new form you navigate to the forms <mark style="color:orange;">**#1**</mark>, click the <mark style="color:blue;">Add New</mark> <mark style="color:orange;">**#2**</mark> to add a new form. Then  <mark style="color:orange;">**#3**</mark> shows the Form details form field will be displayed. When clicking on the Form Type drop down, you see available form types
 
-<figure><img src="../../../.gitbook/assets/Untitled design 29.png" alt=""><figcaption><p><mark style="color:red;">Click Image to view full screen</mark></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/1 (1) (1).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/1 (5).png" alt=""><figcaption><p><mark style="color:red;">Click Image to view full screen</mark></p></figcaption></figure>
 
 The Table below shows different types of forms, You select one of the following forms. <mark style="color:blue;">For more information regarding forms see,</mark> [forms](../../../overview/components-overview/forms/ "mention")
 
