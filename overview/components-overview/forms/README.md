@@ -6,7 +6,7 @@ description: >-
 
 # Forms
 
-Forms are user interfaces that allows user to view, enter and edit data related to a specific entity. They are used to interact with records and perform various action within Ezra360. We have  different forms namely, **Main** form, **Quick Create** form, and **Portal** form, **Mobile** Form.
+Forms are user interfaces that allows user to view, enter and update data related to a specific entity. They are used to interact with records and perform various action within Ezra360. We have  different forms namely, **Main** form, **Quick Create** form, and **Portal** form, **Mobile** Form.
 
 **Main Form:**\
 The main form is the comprehensive primary form for a specific entity, and it contains essential fields and information related to that entity. It is mainly used when users access the entity directly through direct links. They provide complete view of the entity, allowing users to perform **CRUD** operations (_Create, Read, Update, Delete_) depending on their security roles. Which has multiple buttons to choose from that makes action to the entity.\

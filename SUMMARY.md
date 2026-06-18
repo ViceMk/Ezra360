@@ -16,7 +16,7 @@
   * [Forms](overview/components-overview/forms/README.md)
     * [Tabs](overview/components-overview/forms/tabs.md)
     * [Section](overview/components-overview/forms/section.md)
-    * [Fields](overview/components-overview/forms/fields.md)
+    * [Form Fields](overview/components-overview/forms/form-fields.md)
   * [Subgrids](overview/components-overview/subgrids.md)
   * [Reporting](overview/components-overview/reporting.md)
   * [Action Buttons](overview/components-overview/action-buttons.md)
@@ -50,7 +50,7 @@
 ## Customization
 
 * [Web Resources](customization/web-resources/README.md)
-  * [Javascripts](customization/web-resources/javascripts.md)
+  * [JavaScript  Development Guide](customization/web-resources/javascript-development-guide.md)
   * [HTML](customization/web-resources/html.md)
   * [CSS](customization/web-resources/css.md)
   * [Icons](customization/web-resources/icons.md)
@@ -93,7 +93,7 @@
 * [mSCOA](solutions/mscoa/README.md)
   * [Solution Overview](solutions/mscoa/solution-overview.md)
 * [TVET ERP](solutions/tvet-erp.md)
-* [Commerce](solutions/commerce.md)
+* [e-Commerce](solutions/e-commerce.md)
 * [MIB](solutions/mib.md)
 
 ## Integrations
