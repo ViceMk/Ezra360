@@ -99,50 +99,151 @@ Right-click the Plugins folder in Solution Explorer, select Add > Class, and giv
 Your class must use the correct using directives and implement the required interface. Below is the&#x20;standard boilerplate structure:
 
 ```cs
-using Xrm.Soft.Aer.SDK; 
-using System; 
-using System.Linq; 
-using System.Collections.Generic; 
- 
-namespace ERP.Ezra360.Package.Plugins 
-{ 
-    public class CalculatePackageTotals : IXrmPlugin 
-    { 
-        public void ExecutePlugin(PluginExecutionContext context) 
-        { 
-            try 
-            { 
-                // 1. Get the triggering record 
-                var target = (BusinessEntity)context.Target; 
-                var packageLineId = target.Id.Value; 
- 
-                // 2. Run a SQL query to get related data 
-                var lines = context.BusinessActions 
-                    .ExecuteListQuery<PackageLine>(PackageSQL.GetPackageLines 
-                        .Replace("@PackageLineId", $"'{packageLineId}'")) 
-                    .ToList(); 
- 
-                // 3. Calculate total 
-                decimal total = lines.Sum(l => l.Amount); 
- 
-                // 4. Update the parent record 
-                var package = new BusinessEntity("Package") 
-                { 
-                    Id = lines.First().PackageId, 
-                    Attributes = new List<EntityAttribute> 
+using Xrm.Soft.Aer.SDK;
+using System;
+using System.Linq;
+using System.Collections.Generic;
+using System.Diagnostics;
+
+namespace ERP.Ezra360.Package.Plugins
+{
+    public class CalculatePackageTotals : IXrmPlugin
+    {
+        private const decimal MaxTotalAmount = 1000000m;
+
+        public void ExecutePlugin(PluginExecutionContext context)
+        {
+            var stopwatch = Stopwatch.StartNew();
+            context.Trace("CalculatePackageTotals: Execution started.");
+
+            try
+            {
+                // Validate
+                ValidateContext(context);
+                var packageLineId = GetPackageLineId(context);
+                context.Trace($"CalculatePackageTotals: Processing PackageLine ID: {packageLineId}");
+
+                // Get and validate lines
+                var lines = GetPackageLines(context, packageLineId);
+                if (!lines.Any())
+                {
+                    context.Trace("CalculatePackageTotals: No package lines found. Skipping update.");
+                    return;
+                }
+
+                // Calculate and validate total
+                var total = CalculateTotal(lines);
+                ValidateTotal(total);
+
+                // Update package
+                UpdatePackage(context, lines.First().PackageId.Value, total);
+
+                stopwatch.Stop();
+                context.Trace($"CalculatePackageTotals: Completed successfully in {stopwatch.ElapsedMilliseconds}ms.");
+            }
+            catch (Exception ex)
+            {
+                context.Trace($"CalculatePackageTotals ERROR: {ex.Message}");
+                context.Trace($"CalculatePackageTotals Stack Trace: {ex.StackTrace}");
+
+                if (ex.InnerException != null)
+                {
+                    context.Trace($"CalculatePackageTotals Inner Exception: {ex.InnerException.Message}");
+                }
+
+                throw new InvalidPluginExecutionException($"CalculatePackageTotals failed: {ex.Message}", ex);
+            }
+        }
+
+        private void ValidateContext(PluginExecutionContext context)
+        {
+            if (context == null)
+                throw new ArgumentNullException(nameof(context));
+
+            if (context.Target == null)
+                throw new InvalidOperationException("Target record is required.");
+        }
+
+        private Guid GetPackageLineId(PluginExecutionContext context)
+        {
+            var target = context.Target as BusinessEntity;
+            if (target == null || !target.Id.HasValue || target.Id.Value == Guid.Empty)
+                throw new InvalidOperationException("Valid target ID is required.");
+
+            return target.Id.Value;
+        }
+
+        private List<PackageLine> GetPackageLines(PluginExecutionContext context, Guid packageLineId)
+        {
+            var query = PackageSQL.GetPackageLines.Replace("@PackageLineId", $"'{packageLineId}'");
+            context.Trace($"CalculatePackageTotals: Executing query: {query}");
+
+            return context.BusinessActions
+                .ExecuteListQuery<PackageLine>(query)
+                .ToList();
+        }
+
+        private decimal CalculateTotal(List<PackageLine> lines)
+        {
+            if (lines == null || lines.Count == 0)
+                throw new InvalidOperationException("No package lines to calculate.");
+
+            return Math.Round(lines.Sum(l => l.Amount), 2);
+        }
+
+        private void ValidateTotal(decimal total)
+        {
+            if (total < 0)
+                throw new InvalidOperationException($"Total amount cannot be negative: {total:C}");
+
+            if (total > MaxTotalAmount)
+                throw new InvalidOperationException($"Total amount {total:C} exceeds maximum allowed {MaxTotalAmount:C}");
+        }
+
+        private void UpdatePackage(PluginExecutionContext context, Guid packageId, decimal total)
+        {
+            context.Trace($"CalculatePackageTotals: Updating Package ID: {packageId} with total: {total:C}");
+
+            var package = new BusinessEntity("Package")
+            {
+                Id = packageId,
+                Attributes = new List<EntityAttribute>
+                {
+                    new EntityAttribute 
                     { 
-                        new EntityAttribute { SchemaName = "TotalAmount", Value = total } 
-                    } 
-                }; 
-                context.BusinessActions.Update(package); 
-            } 
-            catch (Exception ex) 
-            { 
-                Log.Error($"CalculatePackageTotals Error: {ex}"); 
-            } 
-        } 
-    } 
-} 
+                        SchemaName = "totalamount", 
+                        Value = total 
+                    }
+                }
+            };
+
+            context.BusinessActions.Update(package);
+            context.Trace("CalculatePackageTotals: Package updated successfully.");
+        }
+    }
+
+    public class PackageLine
+    {
+        public Guid Id { get; set; }
+        public Guid? PackageId { get; set; }
+        public decimal Amount { get; set; }
+        public string ProductName { get; set; }
+        public int Quantity { get; set; }
+    }
+
+    public static class PackageSQL
+    {
+        public const string GetPackageLines = @"
+            SELECT 
+                Id,
+                PackageId,
+                ISNULL(Amount, 0) AS Amount,
+                ProductName,
+                Quantity
+            FROM PackageLine
+            WHERE Id = @PackageLineId";
+    }
+}
 ```
 {% endstep %}
 

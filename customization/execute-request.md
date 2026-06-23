@@ -88,49 +88,140 @@ Execute requests give you an on-demand alternative to event-driven plugins. They
 A class implementing IExecuteRequest must declare the following properties and the ExecutePlugin&#x20;method:
 
 ```csharp
-using Xrm.Soft.Aer.SDK; 
-using System; 
-using System.Collections.Generic; 
- 
-namespace ERP.Ezra360.Package.Execute_Requests 
-{ 
-    public class SendEmailReminderReq : IExecuteRequest 
-    { 
-        // Required properties — the platform sets these before calling 
-ExecutePlugin 
-        public string EntityName        { get; set; } 
-        public Guid RecordId            { get; set; } 
-        public BusinessEntity Record    { get; set; } 
-        public Dictionary<string, object> InputParameters { get; set; } 
- 
-        public ExecuteResponse ExecutePlugin(PluginExecutionContext context) 
-        { 
-            try 
-            { 
-                // Your logic here 
- 
-                return new ExecuteResponse 
-                { 
-                    IsSuccess = true, 
-                    ClientMessage = "Operation completed successfully.", 
-                    OutputParameters = new Dictionary<string, object> 
-                    { 
-                        { "ProcessedCount", 42 } 
-                    } 
-                }; 
-            } 
-            catch (Exception ex) 
-            { 
-                Log.Error($"SendEmailReminderReq Error: {ex}"); 
- 
-                return new ExecuteResponse 
-                { 
-                    IsSuccess = false, 
-                    ClientMessage = ex.Message 
-                }; 
-            } 
-        } 
-    } 
+using System;
+using System.Collections.Generic;
+using Crm.SoftAer.Com.Model;
+using Ezra360.MSCOA.Statement.PDFGenerators;
+using Xrm.Soft_Aer.SDK;
+
+namespace Ezra360.MSCOA.Statement.ExecuteRequest
+{
+    public class PreviewStatementExecuteRequest : IExecuteRequest
+    {
+        public string EntityName { get; set; }
+        public Guid RecordId { get; set; }
+        public BusinessEntity Record { get; set; }
+        public Dictionary<string, object> InputParameters { get; set; }
+
+        public ExecuteResponse ExecutePlugin(PluginExecutionContext context)
+        {
+            try
+            {
+                context.Trace("PreviewStatementExecuteRequest: Execution started.");
+
+                // Validate context
+                if (context == null)
+                {
+                    context.Trace("PreviewStatementExecuteRequest: Plugin context is null.");
+                    return CreateErrorResponse("Plugin context is null.");
+                }
+
+                context.Trace($"PreviewStatementExecuteRequest: Resolving Statement record. RecordId: {RecordId}, Record: {(Record != null ? Record.Id?.ToString() : "null")}");
+
+                var statement = ResolveStatement(context);
+                if (statement == null)
+                {
+                    context.Trace("PreviewStatementExecuteRequest: Unable to resolve Statement record for preview.");
+                    return CreateErrorResponse("Unable to resolve Statement record for preview.");
+                }
+
+                context.Trace($"PreviewStatementExecuteRequest: Statement resolved successfully. StatementId: {statement.Id}");
+
+                var statementPdfGenerator = new StatementPdfGenerator();
+                context.Trace("PreviewStatementExecuteRequest: Generating PDF...");
+
+                var docArray = statementPdfGenerator.Generate(context, statement, "Statement");
+
+                if (docArray == null || docArray.Length == 0)
+                {
+                    context.Trace("PreviewStatementExecuteRequest: Failed to generate Statement PDF - returned null or empty array.");
+                    return CreateErrorResponse("Failed to generate Statement PDF.");
+                }
+
+                context.Trace($"PreviewStatementExecuteRequest: PDF generated successfully. Size: {docArray.Length} bytes.");
+                
+                var base64Result = Convert.ToBase64String(docArray);
+                context.Trace($"PreviewStatementExecuteRequest: PDF converted to Base64. Length: {base64Result.Length} characters.");
+
+                return new ExecuteResponse
+                {
+                    IsSuccess = true,
+                    Results = base64Result
+                };
+            }
+            catch (Exception ex)
+            {
+                context.Trace($"PreviewStatementExecuteRequest ERROR: {ex.Message}");
+                context.Trace($"PreviewStatementExecuteRequest Stack Trace: {ex.StackTrace}");
+                
+                // Log inner exception if exists
+                if (ex.InnerException != null)
+                {
+                    context.Trace($"PreviewStatementExecuteRequest Inner Exception: {ex.InnerException.Message}");
+                    context.Trace($"PreviewStatementExecuteRequest Inner Stack Trace: {ex.InnerException.StackTrace}");
+                }
+
+                return CreateErrorResponse($"PreviewStatement Error: {ex.Message}");
+            }
+            finally
+            {
+                context.Trace("PreviewStatementExecuteRequest: Execution completed.");
+            }
+        }
+
+        private BusinessEntity ResolveStatement(PluginExecutionContext context)
+        {
+            context.Trace("ResolveStatement: Starting resolution process.");
+
+            // Check Record property first (highest priority)
+            if (Record != null && Record.Id.HasValue && Record.Id.Value != Guid.Empty)
+            {
+                context.Trace($"ResolveStatement: Using Record property with Id: {Record.Id.Value}");
+                return context.BusinessActions.RetrieveRecord("Statement", Record.Id.Value);
+            }
+
+            // Check RecordId property
+            if (RecordId != Guid.Empty)
+            {
+                context.Trace($"ResolveStatement: Using RecordId property: {RecordId}");
+                return context.BusinessActions.RetrieveRecord("Statement", RecordId);
+            }
+
+            // Check InputParameters for StatementId
+            if (InputParameters != null && InputParameters.TryGetValue("StatementId", out var statementIdObj))
+            {
+                context.Trace($"ResolveStatement: Found StatementId in InputParameters: {statementIdObj}");
+                if (Guid.TryParse(statementIdObj?.ToString(), out var statementId) && statementId != Guid.Empty)
+                {
+                    context.Trace($"ResolveStatement: Successfully parsed StatementId: {statementId}");
+                    return context.BusinessActions.RetrieveRecord("Statement", statementId);
+                }
+                else
+                {
+                    context.Trace($"ResolveStatement: Failed to parse StatementId from InputParameters: {statementIdObj}");
+                }
+            }
+
+            // Check context target
+            if (context.Target is BusinessEntity target && target.Id.HasValue && target.Id.Value != Guid.Empty)
+            {
+                context.Trace($"ResolveStatement: Using context.Target with Id: {target.Id.Value}");
+                return context.BusinessActions.RetrieveRecord("Statement", target.Id.Value);
+            }
+
+            context.Trace("ResolveStatement: No valid Statement identifier found.");
+            return null;
+        }
+
+        private ExecuteResponse CreateErrorResponse(string message)
+        {
+            return new ExecuteResponse
+            {
+                IsSuccess = false,
+                ClientMessage = message
+            };
+        }
+    }
 }
 ```
 
