@@ -8,19 +8,13 @@ layout: editorial
 
 # Welcome To Ezra360
 
-{% columns %}
-{% column %}
-
-{% endcolumn %}
-
-{% column %}
-
-{% endcolumn %}
-{% endcolumns %}
-
-{% include ".gitbook/includes/untitled.md" %}
-
 <table data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td><strong>Ezra360 Background</strong></td><td><a href=".gitbook/assets/Background.png">Background.png</a></td></tr><tr><td><strong>User Guide</strong></td><td><a href=".gitbook/assets/user Guide 1.png">user Guide 1.png</a></td></tr><tr><td><strong>Components Overview</strong></td><td><a href=".gitbook/assets/user Guide 1.png">user Guide 1.png</a></td></tr><tr><td><strong>Customization</strong></td><td><a href=".gitbook/assets/user Guide 1.png">user Guide 1.png</a></td></tr><tr><td><strong>Security, roles, and permissions</strong></td><td><a href=".gitbook/assets/user Guide 1.png">user Guide 1.png</a></td></tr><tr><td><strong>Solutions</strong></td><td><a href=".gitbook/assets/user Guide 1.png">user Guide 1.png</a></td></tr><tr><td><strong>Mobile Application</strong></td><td><a href=".gitbook/assets/user Guide 1.png">user Guide 1.png</a></td></tr><tr><td><strong>Web Portal</strong></td><td><a href=".gitbook/assets/user Guide 1.png">user Guide 1.png</a></td></tr><tr><td><strong>Integrations</strong></td><td><a href=".gitbook/assets/user Guide 1.png">user Guide 1.png</a></td></tr></tbody></table>
+
+{% prompt description="" %}
+```markdown
+// add agent instructions
+```
+{% endprompt %}
 
 * [Ezra360 Background](get-started/ezra360-background/) — understand the platform and its solutions.
 * [User Guide](get-started/user-guide.md) — learn the core user workflows.
