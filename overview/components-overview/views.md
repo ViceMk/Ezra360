@@ -27,7 +27,7 @@ On <mark style="color:orange;">**#1**</mark> shows where you can filter the view
 <mark style="color:orange;">**#2**</mark> is the search bar where you search for the list of data you want to view.\
 <mark style="color:orange;">**#3**</mark> Shows an index find where you can filter the list of data by alphabet. When you click alphabet it will show data that starts with that specific alphabet.
 
-<figure><img src="../../.gitbook/assets/Untitled design 37.png" alt=""><figcaption><p><mark style="color:red;">Click image to view full screen</mark></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (23).png" alt=""><figcaption><p><mark style="color:red;">Click image to view full screen</mark></p></figcaption></figure>
 
 * **Quick Find:** Finding a specific record by using search bar.
 * **Filters:** Filter data to display only what you’re interested in.
@@ -37,4 +37,4 @@ On <mark style="color:orange;">**#1**</mark> shows where you can filter the view
 
 The image below shows a view with Select options. The pointer at <mark style="color:orange;">**#4**</mark> shows the listing of views.
 
-<figure><img src="../../.gitbook/assets/Untitled design 40.png" alt=""><figcaption><p><mark style="color:red;">Click image to view full screen</mark></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (24).png" alt=""><figcaption><p><mark style="color:red;">Click image to view full screen</mark></p></figcaption></figure>

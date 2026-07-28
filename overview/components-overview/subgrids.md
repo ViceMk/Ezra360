@@ -7,4 +7,4 @@ The add button on <mark style="color:orange;">**#1**</mark> opens a form to add 
 
 Subgrids in Ezra can be used to display and manage various related records, depending on the relationships established in the data model.
 
-<figure><img src="../../.gitbook/assets/Untitled design 13.png" alt=""><figcaption><p><mark style="color:red;">Click image to view full screen</mark></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (1) (11).png" alt=""><figcaption><p><mark style="color:red;">Click image to view full screen</mark></p></figcaption></figure>

@@ -1,6 +1,28 @@
 ---
-cover: ../../.gitbook/assets/HomeLaptop_Mockup02.svg
-coverY: 192
+cover: ../../.gitbook/assets/Screenshot 2026-07-01 160135.png
+coverY: 0
+layout:
+  width: default
+  cover:
+    visible: true
+    size: full
+    mask: none
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
 # Dashboard
@@ -15,7 +37,7 @@ When you first log in to the <mark style="color:orange;">**Ezra**</mark><mark st
 \
 <mark style="color:orange;">**#4**</mark> Shows the name of your organization on the top left-hand corner of the top bar. The organization name and the logo, composing of organization color theme, this is a customizable preference. The UI, including logo, colors on the <mark style="color:green;">Top Bar</mark> are customizable to best fit your business and organization theme and requirements.
 
-<figure><img src="../../.gitbook/assets/Untitled design 33.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (1) (10).png" alt=""><figcaption></figcaption></figure>
 
 \
 &#xNAN;_**Dashboards** pages serves as a central hub that provides an overview of your activities, tasks, and important updates related to your role or responsibilities._ Ezra360 dashboards are customizable, The system has  several dashboard layouts that can be tailored for your role. You can have different types of charts that best display your data right from within the dashboard layout.
@@ -25,7 +47,7 @@ To select a different dashboard, select the dropdown arrow on <mark style="color
 \
 You can also have an **embedded Dashboard** that is integrated with **PowerBI** on Ezra360, that allows you to use your <mark style="color:orange;">**PowerBI**</mark> account to sign in and have your dashboard displaying data from PowerBI for business intelligence decision. <mark style="color:blue;">For more information on imbedded dashboard see</mark> [dashboards.md](../../configurations/components/dashboards.md "mention") <mark style="color:blue;">on how to configure it.</mark>
 
-<figure><img src="../../.gitbook/assets/Untitled design 35 (1).png" alt=""><figcaption><p><mark style="color:red;">Click image to view full screen</mark></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 (20).png" alt=""><figcaption><p><mark style="color:red;">Click image to view full screen</mark></p></figcaption></figure>
 
 
 

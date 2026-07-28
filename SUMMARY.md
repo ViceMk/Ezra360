@@ -32,7 +32,7 @@
     * [Forms](configurations/components/entities/forms/README.md)
       * [Form Tabs](configurations/components/entities/forms/form-tabs.md)
       * [Form Sections](configurations/components/entities/forms/form-sections.md)
-      * [Linked Scripts](configurations/components/entities/forms/linked-scripts.md)
+      * [Form Resources](configurations/components/entities/forms/form-resources.md)
       * [Buttons](configurations/components/entities/forms/buttons.md)
     * [Web Hooks](configurations/components/entities/web-hooks.md)
     * [Plugin Messages](configurations/components/entities/plugin-messages.md)
@@ -49,7 +49,7 @@
 ## Customization
 
 * [Web Resources](customization/web-resources/README.md)
-  * [JavaScript  Development Guide](customization/web-resources/javascript-development-guide.md)
+  * [JavaScript](customization/web-resources/javascript.md)
   * [HTML](customization/web-resources/html.md)
   * [CSS](customization/web-resources/css.md)
   * [Icons](customization/web-resources/icons.md)

@@ -5,7 +5,7 @@
 \
 You will often find multiple sections within the form. Each section contains a set of fields that are logically related or pertain to a specific aspect of the entity being displayed. These sections are visually separated from each other to provide clarity and structure to the form.<br>
 
-<figure><img src="../../../.gitbook/assets/Untitled design 10.png" alt=""><figcaption><p><mark style="color:red;">Click image to view full screen</mark></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/1 (27).png" alt=""><figcaption><p><mark style="color:red;">Click image to view full screen</mark></p></figcaption></figure>
 
 
 
