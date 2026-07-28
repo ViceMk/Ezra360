@@ -62,6 +62,10 @@
 * [Data Import](customization/data-import.md)
 * [SDK's](customization/sdks.md)
 
+## Mobile Development
+
+* [Clean Architecture and Coding Standards Guide](mobile-development/clean-architecture-and-coding-standards-guide.md)
+
 ## SECURITY AND ROLES
 
 * [User Roles](security-and-roles/user-roles.md)
