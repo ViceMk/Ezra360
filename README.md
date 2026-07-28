@@ -8,25 +8,19 @@ layout: editorial
 
 # Welcome To Ezra360
 
+{% columns %}
+{% column %}
 
+{% endcolumn %}
+
+{% column %}
+
+{% endcolumn %}
+{% endcolumns %}
 
 {% include ".gitbook/includes/untitled.md" %}
 
-<details>
-
-<summary></summary>
-
-
-
-</details>
-
-{% updates format="full" %}
-{% update date="2026-07-28" %}
-##
-
-
-{% endupdate %}
-{% endupdates %}
+<table data-view="cards"><thead><tr><th></th></tr></thead><tbody><tr><td><strong>Ezra360 Background</strong></td></tr><tr><td><strong>User Guide</strong></td></tr><tr><td><strong>Components Overview</strong></td></tr><tr><td><strong>Customization</strong></td></tr><tr><td><strong>Security, roles, and permissions</strong></td></tr><tr><td><strong>Solutions</strong></td></tr><tr><td><strong>Mobile Application</strong></td></tr><tr><td><strong>Web Portal</strong></td></tr><tr><td><strong>Integrations</strong></td></tr></tbody></table>
 
 * [Ezra360 Background](get-started/ezra360-background/) — understand the platform and its solutions.
 * [User Guide](get-started/user-guide.md) — learn the core user workflows.
