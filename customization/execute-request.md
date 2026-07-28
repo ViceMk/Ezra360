@@ -4,8 +4,8 @@
 
 ### 1.1 What is an Execute Request?
 
-An Execute Request is a class that implements the **IExecuteRequest** interface. Unlike plugins, execute&#x20;requests are not triggered automatically — they are invoked on demand by a button click, workflow,&#x20;scheduled job, or another plugin.\
-Execute requests must return an **ExecuteResponse** object that communicates success or failure back&#x20;to the caller.
+An Execute Request is a class that implements the **IExecuteRequest** interface. Unlike plugins, execute requests are not triggered automatically; they are invoked on demand by a button click, workflow, scheduled job, or another plugin.\
+Execute requests must return an **ExecuteResponse** object that communicates success or failure back to the caller.
 
 #### Common use cases for execute requests:
 
@@ -19,9 +19,9 @@ Execute requests must return an **ExecuteResponse** object that communicates suc
 
 * [ ] Triggered on demand by user or process
 * [ ] Implements IExecuteRequest
-* [ ] Return type: ExecuteResponse
-* [ ] Execution step: ExecuteRequest
-* [ ] Access: PluginExecutionContext
+* [x] Return type: ExecuteResponse
+* [x] Execution step: ExecuteRequest
+* [x] Access: PluginExecutionContext
 * [ ] Example: Send bulk reminder emails
 
 ## 2. Prerequisites & NuGet Packages
@@ -36,18 +36,18 @@ Before writing any code, ensure your development environment is properly set up.
 
 ### 2.2 Creating the Project
 
-In Visual Studio, create a new Class Library project targeting .NET Core 3.1:
+In Visual Studio, create a new class library project targeting .NET Core 3.1:
 
 1. Open Visual Studio 2022
-2. Click Create a new project
-3. Search for "Class Library" and select Class Library (.NET Core)
-4. Name the project using the convention: CompanyName.Module.Feature — e.g. ERP.Ezra360.Package
+2. Click "**Create a new project.**"
+3. Search for "Class Library" and select "Class Library (.NET Core)."
+4. Name the project using the convention: CompanyName. Module. Feature: ERP.Ezra360. Package
 5. Set the framework to .NET Core 3.1
-6. Click Create
+6. Click "**Create**."
 
 ### 2.3 Required NuGet Packages
 
-Add the following packages via NuGet Package Manager (Tools > NuGet Package Manager > Manage&#x20;&#x20;NuGet Packages for Solution):
+Add the following packages via NuGet Package Manager (Tools > NuGet Package Manager > Manage NuGet Packages for Solution):
 
 <figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
@@ -55,7 +55,7 @@ Add the following packages via NuGet Package Manager (Tools > NuGet Package Mana
 
 ## 3. Project Structure in Visual Studio
 
-A well-organised Ezra360 plugin project follows a consistent folder structure. Each folder serves a&#x20;specific purpose and maps to a distinct category of code responsibility.
+A well organized Ezra360 plugin project sticks to a clean, consistent folder structure. Each folder has a clear job; it maps to a specific category of code, so you always know where to find things and where new code should go.
 
 ### 3.1 Recommended Folder Layout
 
@@ -73,19 +73,19 @@ YourProject/\
 
 #### Execute Requests/&#xD;
 
-Contains all on-demand logic classes. Each file in this folder implements IExecuteRequest. These are&#x20;invoked by buttons, workflows, or scheduled processes — never fired automatically by the platform.
+Contains all demand logic classes. Each file in this folder implements IExecuteRequest. These are invoked by buttons, workflows, or scheduled processes and never fired automatically by the platform.
 
 #### Models/&#xD;
 
-Contains plain C# classes (POCOs) that map to the results of your SQL queries. When you execute a&#x20;SQL query through context.BusinessActions.ExecuteListQuery(), the SDK maps each result row to&#x20;an instance of your model class. Column names in the SQL SELECT must match property names on&#x20;the model.
+Contains plain C# classes (POCOs) that map to the results of your SQL queries. When you execute a SQL query through context. BusinessActions. ExecuteListQuery(), the SDK maps each result row to an instance of your model class. Column names in the SQL SELECT must match property names on the model.
 
 ## 4. Creating an Execute Request (IExecuteRequest)
 
-Execute requests give you an on-demand alternative to event-driven plugins. They expose an entry&#x20;point that can be called from a button, workflow, or scheduled job, and they return a structured result.
+Execute requests give you an on-demand alternative to event-driven plugins. They expose an entry point that can be called from a button, workflow, or scheduled job, and they return a structured result.
 
 ### 4.1 Interface Structure
 
-A class implementing IExecuteRequest must declare the following properties and the ExecutePlugin&#x20;method:
+A class implementing IExecuteRequest must declare the following properties and the ExecutePlugin&#x20;method:
 
 ```csharp
 using System;
@@ -128,7 +128,7 @@ namespace Ezra360.MSCOA.Statement.ExecuteRequest
                 context.Trace($"PreviewStatementExecuteRequest: Statement resolved successfully. StatementId: {statement.Id}");
 
                 var statementPdfGenerator = new StatementPdfGenerator();
-                context.Trace("PreviewStatementExecuteRequest: Generating PDF...");
+context. Trace("PreviewStatementExecuteRequest: Generating PDF...");
 
                 var docArray = statementPdfGenerator.Generate(context, statement, "Statement");
 
@@ -177,39 +177,39 @@ namespace Ezra360.MSCOA.Statement.ExecuteRequest
             if (Record != null && Record.Id.HasValue && Record.Id.Value != Guid.Empty)
             {
                 context.Trace($"ResolveStatement: Using Record property with Id: {Record.Id.Value}");
-                return context.BusinessActions.RetrieveRecord("Statement", Record.Id.Value);
+return context. BusinessActions. RetrieveRecord("Statement", Record.Id.Value);
             }
 
             // Check RecordId property
             if (RecordId != Guid.Empty)
             {
-                context.Trace($"ResolveStatement: Using RecordId property: {RecordId}");
-                return context.BusinessActions.RetrieveRecord("Statement", RecordId);
+context. Trace($"ResolveStatement: Using RecordId property: {RecordId}");
+return context. BusinessActions. RetrieveRecord("Statement", RecordId);
             }
 
             // Check InputParameters for StatementId
-            if (InputParameters != null && InputParameters.TryGetValue("StatementId", out var statementIdObj))
+if (InputParameters != null && InputParameters. TryGetValue("StatementId", out var statementIdObj))
             {
-                context.Trace($"ResolveStatement: Found StatementId in InputParameters: {statementIdObj}");
+context. Trace($"ResolveStatement: Found StatementId in InputParameters: {statementIdObj}");
                 if (Guid.TryParse(statementIdObj?.ToString(), out var statementId) && statementId != Guid.Empty)
                 {
-                    context.Trace($"ResolveStatement: Successfully parsed StatementId: {statementId}");
-                    return context.BusinessActions.RetrieveRecord("Statement", statementId);
+context. Trace($"ResolveStatement: Successfully parsed StatementId: {statementId}");
+return context. BusinessActions. RetrieveRecord("Statement", statementId);
                 }
                 else
                 {
-                    context.Trace($"ResolveStatement: Failed to parse StatementId from InputParameters: {statementIdObj}");
+context. Trace($"ResolveStatement: Failed to parse StatementId from InputParameters: {statementIdObj}");
                 }
             }
 
             // Check context target
-            if (context.Target is BusinessEntity target && target.Id.HasValue && target.Id.Value != Guid.Empty)
+if (context.Target is BusinessEntity target && target. Id.HasValue && target. Id.Value != Guid.Empty)
             {
-                context.Trace($"ResolveStatement: Using context.Target with Id: {target.Id.Value}");
-                return context.BusinessActions.RetrieveRecord("Statement", target.Id.Value);
+context. Trace($"ResolveStatement: Using context. Target with Id: {target.Id.Value}");
+return context. BusinessActions. RetrieveRecord("Statement", target.Id.Value);
             }
 
-            context.Trace("ResolveStatement: No valid Statement identifier found.");
+context. Trace("ResolveStatement: No valid Statement identifier found.");
             return null;
         }
 
@@ -227,7 +227,7 @@ namespace Ezra360.MSCOA.Statement.ExecuteRequest
 
 ### 4.2 The ExecuteResponse Object
 
-The ExecuteResponse tells the caller whether the operation succeeded and provides a message and&#x20;optional data back:
+The ExecuteResponse tells the caller whether the operation succeeded and provides a message and optional data back:
 
 <figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
@@ -235,14 +235,14 @@ The ExecuteResponse tells the caller whether the operation succeeded and provide
 
 ## 5. Building the DLL in Visual Studio
 
-Once your execute request code is complete, you need to compile the project to produce a&#x20;DLL file that will be uploaded to Ezra360.
+Once your execute request code is complete, you need to compile the project to produce a DLL file that will be uploaded to Ezra360.
 
 ### 5.1 Build the Solution
 
-Go to the menu bar and select Build > Build Solution, or press Ctrl + Shift + B. Visual Studio will&#x20;compile all projects in the solution.
+Go to the menu bar and select Build > Build Solution, or press Ctrl + Shift + B. Visual Studio will compile all projects in the solution.
 
 {% hint style="info" %}
-The build must complete with zero errors. Warnings are acceptable. If there are&#x20;errors, the DLL file will not be generated and any existing DLL at the output path may&#x20;be stale or absent.
+The build must be complete with zero errors. Warnings are acceptable. If there are errors, the DLL file will not be generated and any existing DLL at the output path may&#x20;be stale or absent.
 {% endhint %}
 
 ### 5.2 Locate the Output DLL
@@ -251,7 +251,7 @@ After a successful build, the compiled DLL is placed in:
 
 _<mark style="color:$primary;">ProjectFolder\bin\Debug\netcoreapp3.1\YourProjectName.dll</mark>_
 
-Navigate to this folder in Windows Explorer. The DLL filename matches your project name exactly. You&#x20;will also see a .pdb file (debug symbols) and a .deps.json file — only the .dll needs to be uploaded.
+Navigate to this folder in Windows Explorer. The DLL filename matches your project name exactly. You will also see a .pdb file (debug symbols) and a .deps.json file; only the .dll needs to be uploaded.
 
 {% hint style="info" %}
 Tip: Always build in Debug mode when uploading to a sandbox or UAT environment. Use Release&#x20;mode only for production deployments. Debug builds include additional diagnostic information that&#x20;helps trace issues in Plugin Trace Logs.
@@ -265,13 +265,13 @@ Tip: Always build in Debug mode when uploading to a sandbox or UAT environment. 
 
 ## 6. Uploading the DLL to Ezra360
 
-After building the DLL, it must be uploaded to Ezra360 as an Xrm Assembly record. The assembly&#x20;record holds the compiled code and serves as the container for all plugin classes and plugin message&#x20;registrations.
+After building the DLL, it must be uploaded to Ezra360 as an Xrm assembly record. The assembly record holds the compiled code and serves as the container for all plugin classes and plugin message&#x20;registrations.
 
 {% stepper %}
 {% step %}
 ### Navigate to Xrm Assemblies&#x20;
 
-Log into your Ezra360 environment. From the top navigation bar, open the Customizations menu. Scroll&#x20;down to Xrm Assemblies and click it.
+Log into your Ezra360 environment. From the top navigation bar, open the Customizations menu. Scroll down to Xrm Assemblies and click them.
 
 <figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
@@ -281,13 +281,13 @@ Log into your Ezra360 environment. From the top navigation bar, open the Customi
 {% step %}
 ### Create or Update the Assembly
 
-If this is the first time you are uploading this DLL, click New to create a new assembly record. If the&#x20;assembly already exists and you are updating it after a code change, click on the existing record.
+If this is the first time you are uploading this DLL, click New to create a new assembly record. If the assembly already exists and you are updating it after a code change, click on the existing record.
 
 The assembly record form contains:
 
 * File — a file upload control to select your .dll file
 * Assembly Name — auto-populated from the DLL metadata after upload  &#x20;
-* Version — auto-populated with your build version number (e.g. 2026.5.28.1422)
+* Version—auto-populated with your build version number (e.g., 2026.5.28.1422)
 
 {% hint style="info" %}
 The version number in Ezra360 reflects your assembly version attribute in the .csproj&#x20;file. It typically follows the format **Year.Month.Day.BuildNumber.** You can confirm you&#x20;have the right version after upload.
@@ -295,11 +295,11 @@ The version number in Ezra360 reflects your assembly version attribute in the .c
 {% endstep %}
 
 {% step %}
-### Upload the DLL File
+### Upload the DLL file.
 
-Click the Choose File button in the assembly form, navigate to your bin/Debug/netcoreapp3.1/ folder,&#x20;and select the .dll file. The Assembly Name and Version fields will auto-populate once the file is&#x20;selected.
+Click the Choose File button in the assembly form, navigate to your bin/Debug/netcoreapp3.1/ folder, and select the .dll file. The Assembly Name and Version fields will auto-populate once the file is selected.
 
-Click Save & Close to complete the upload. The assembly is now registered in Ezra360 and ready for&#x20;plugin message registration.
+Click Save & Close to complete the upload. The assembly is now registered in Ezra360 and ready for plugin message registration.
 
 <figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
@@ -307,19 +307,19 @@ Click Save & Close to complete the upload. The assembly is now registered in Ezr
 
 ## 7. Registering Plugin Classes
 
-After uploading your assembly, you must register each plugin class you want to use. Plugin classes are&#x20;listed under the XRM Plugin Classes tab on the assembly record. This step tells Ezra360 which C#&#x20;classes in your DLL are valid plugins.
+After uploading your assembly, you must register each plugin class you want to use. Plugin classes are listed under the XRM Plugin Classes tab on the assembly record. This step tells Ezra360 which C# classes in your DLL are valid plugins.
 
 ### 7.1 Adding a New Plugin Class
 
-On the assembly record, click the XRM Plugin Classes tab. Click Add New to open the Quick Create&#x20;dialog.
+On the assembly record, click the XRM Plugin Classes tab. Click "Add New" to open the Quick Create dialog.
 
 <figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
 Fill in the following fields:
 
 *  Name — must match the class name exactly as it appears in your C# code&#x20;
-* Plugin Type — select the appropriate type for  &#x20;Execute Requests
-* Assembly — pre-filled with the current assembly record
+* Plugin Type — select the appropriate type for&#x20;  executing requests
+* Assembly — prefilled with the current assembly record
 
 <figure><img src="../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
 
@@ -327,18 +327,18 @@ Fill in the following fields:
 
 ## 8. Registering Plugin Messages
 
-A Plugin Message is the configuration record that tells Ezra360 when to fire a specific plugin class. It&#x20;binds a plugin class to an entity and an execution step.\
+A plugin message is the configuration record that tells Ezra360 when to fire a specific plugin class. It binds a plugin class to an entity and an execution step.\
 Plugin messages are registered under the Plugin Messages tab on the assembly record.
 
 ### 8.1 Viewing Existing Plugin Messages
 
 <figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
 
-Each row in the Plugin Messages table represents one registration — one execute request bound to one&#x20;entity and one execution step.
+Each row in the Plugin Messages table represents one registration—one execute request bound to one entity and one execution step.
 
 ### 8.2 Adding a New Plugin Message
 
-Click Add New on the Plugin Messages tab to open the Quick Create dialog:
+Click "Add New" on the Plugin Messages tab to open the Quick Create dialog:
 
 <figure><img src="../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
 
@@ -352,7 +352,7 @@ Fill in all required fields (marked with a red asterisk):
 
 ## 9. Updating an Existing Assembly&#x20;
 
-After your initial deployment, subsequent code changes require re-uploading the DLL. The process is&#x20;similar to the initial upload but with a few important differences.
+After your initial deployment, subsequent code changes require re-uploading the DLL. The process is similar to the initial upload but with a few important differences.
 
 ### 9.1 Re-Upload Process&#x20;
 
@@ -363,7 +363,7 @@ After your initial deployment, subsequent code changes require re-uploading the 
 5. Click the upload/attachment icon next to the Name field (the paperclip icon)&#x20;
 6. Select the updated .dll from your bin/Debug/netcoreapp3.1/ folder&#x20;
 7. The Version field will update to reflect the new build version&#x20;
-8. Click Save
+8. Click "Save."
 
 {% hint style="info" %}
 Tip: You do not need to re-register plugin messages after re-uploading a DLL. Your existing plugin&#x20;message registrations continue to work as long as the class names remain the same. Only add new&#x20;registrations when you add new plugin classes.

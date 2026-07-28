@@ -1,4 +1,4 @@
-# JavaScript  Development Guide
+# JavaScript
 
 ## 1. Overview
 

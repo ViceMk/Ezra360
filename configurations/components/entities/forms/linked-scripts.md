@@ -1,4 +1,4 @@
-# Linked Scripts
+# Form Resources
 
 Linked Resources refers to a capability within an Ezra entities that allows users to associate or link external files (such as documents or code files) with specific records. This functionality is often related to document management and attachments. You can manage and access these linked resources directly from the entity records or in the [Broken link](/broken/pages/PpDJBkanAYsmzCbkZdp9 "mention") tab.
 
